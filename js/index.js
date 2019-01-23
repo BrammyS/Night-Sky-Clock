@@ -1,18 +1,19 @@
 ﻿var columns = Array.from(document.getElementsByClassName('column'));
 var numHeight = 50;
+var h = 0,
+    m = 0,
+    s = 0;
 
 window.onload = startTime();
 
 function startTime() {
     var today = new Date();
-    var h = today.getHours();
-    var m = today.getMinutes();
-    var s = today.getSeconds();
-    var ms = today.getMilliseconds();
+    h = today.getHours();
+    m = today.getMinutes();
+    s = today.getSeconds();
     m = checkTime(m);
     s = checkTime(s);
-    ms = checkTime(ms);
-    console.log(h + ":" + m + ":" + s + ":" + ms);
+    console.log(h + ":" + m + ":" + s);
     var t = setTimeout(startTime, 500);
 }
 
