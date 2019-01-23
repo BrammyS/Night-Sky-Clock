@@ -10,7 +10,6 @@ body {
 }
 
 .clock {
-    top: 25%;
     left: 70%;
     position: absolute;
 }
@@ -20,8 +19,12 @@ body {
     float: left;
 }
 
+.colon:after {
+    content: ':';
+}
+
 .colon {
-    margin-top: 245px;
+    margin-top: 510px;
     width: 20px;
     float: left;
 }

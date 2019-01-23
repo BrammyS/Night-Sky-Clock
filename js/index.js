@@ -11,16 +11,15 @@ function startTime() {
     h = today.getHours();
     m = today.getMinutes();
     s = today.getSeconds();
-    m = checkTime(m);
-    s = checkTime(s);
     console.log(h + ":" + m + ":" + s);
+    MoveRow();
     var t = setTimeout(startTime, 500);
 }
 
-function checkTime(i) {
-    // add zero in front of numbers < 10
-    if (i < 10) {
-        i = "0" + i;
-    } 
-    return i;
+function MoveRow() {
+    columns.forEach(function (element, i) {
+        var offset = -parseInt(s.toString().split('').pop()) * numHeight;
+        element.style.transform = 'translateY(calc(50vh + ' + offset + 'px - ' + numHeight / 2 + 'px))';
+        }
+    );
 }
