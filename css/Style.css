@@ -5,12 +5,12 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 60px;
 }
 
-#clock {
-    top: 30%;
+.clock {
+    top: 25%;
     left: 70%;
     position: absolute;
 }
@@ -26,7 +26,20 @@ body {
     float: left;
 }
 
-.number {
+body .clock .number {
     height: 50px;
     float: left;
+}
+
+.number.visible {
+    opacity: 1.0;
+}
+.number.close {
+    opacity: 0.35;
+}
+.number.far {
+    opacity: 0.15;
+}
+.number.distant {
+    opacity: 0.1;
 }
