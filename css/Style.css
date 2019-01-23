@@ -1,2 +1,32 @@
-﻿body {
+﻿@import url('https://fonts.googleapis.com/css?family=Abel');
+body {
+    background-image: url(../img/NightSky.jpg);
+    font-family: 'Abel', sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 60px;
+}
+
+#clock {
+    top: 30%;
+    left: 70%;
+    position: absolute;
+}
+
+.column {
+    width: 30px;
+    float: left;
+}
+
+.colon {
+    margin-top: 245px;
+    width: 20px;
+    float: left;
+}
+
+.number {
+    height: 50px;
+    float: left;
 }
