@@ -5,8 +5,16 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
+    font-weight: 700;
+    overflow: hidden;
     font-size: 100px;
     color: #ffffff;
+}
+
+.column,
+.colon {
+    display: inline-block;
+    vertical-align: top;
 }
 
 .column {
@@ -15,7 +23,6 @@ body {
     transition: -webkit-transform 350ms;
     transition: transform 350ms;
     width: 50px;
-    float: left;
 }
 
 .colon {
@@ -25,13 +32,11 @@ body {
     transform: translateY(calc(50vh - 110px));
     transition: -webkit-transform 350ms;
     transition: transform 350ms;
-    float: left;
     width: 40px;
 }
 
 .clock {
     position: fixed;
-    float: left;
     left: 60%;
 }
 
@@ -39,20 +44,21 @@ body {
     content: ':';
 }
 
-body .clock .number {
-    float: left;
+.number {
+    -webkit-transition: opacity 600ms;
+    transition: opacity 600ms;
     height: 100px;
 }
 
-.number.distance1 {
+.distance1 {
     opacity: 1.0;
 }
-.number.distance2 {
-    opacity: 0.35;
+.distance2 {
+    opacity: 0.45;
 }
-.number.distance3 {
-    opacity: 0.15;
+.distance3 {
+    opacity: 0.20;
 }
-.number.distance4 {
+.distance4 {
     opacity: 0.1;
 }

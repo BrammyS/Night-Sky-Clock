@@ -1,13 +1,14 @@
 ﻿
 var columns = Array.from(document.getElementsByClassName('column'));
+var Distances = ['distance1', 'distance2', 'distance3', 'distance4'];
 var numHeight = 100;
 
 var Time =
-[
-    0, 0, // Hours
-    0, 0, // Minutes
-    0, 0  // Seconds
-];
+    [
+        0, 0, // Hours
+        0, 0, // Minutes
+        0, 0  // Seconds
+    ];
 
 
 function StartTime() {
@@ -26,7 +27,7 @@ function StartTime() {
             Time[i + i + 1] = parseInt(tempTime[i].toString().split('').pop());
         }
     }
-    console.log(Time[0] + "" + Time[1] + ":" + Time[2] + "" + Time[3] + ":" + Time[4] + "" + Time[5]);
+    // console.log(Time[0] + "" + Time[1] + ":" + Time[2] + "" + Time[3] + ":" + Time[4] + "" + Time[5]);
 
     MoveRow();
     setTimeout(StartTime, 500);
@@ -45,12 +46,22 @@ function MoveRow() {
     columns.forEach(function (element, i) {
             var offset = -Time[i] * numHeight;
             element.style.transform = 'translateY(calc(50vh + ' + offset + 'px - ' + numHeight + 'px))';
-            columns.forEach(function (element, i) {
 
+            // Change opacity of the numbers.
+            Array.from(element.children).forEach(function (element2, number) {
+                    element2.className = 'number ' + GetDistanceClass(Time[i], number);
                 }
             );
         }
     );
+}
+
+// Returns a opacity class.
+function GetDistanceClass(time, number) {
+    if (time === number) return Distances[0];
+    if (time === number + 1 || time === number - 1) return Distances[1];
+    if (time >= number + 1 && time <= number + 3 || time >= number - 3 && time <= number - 1) return Distances[2];
+    return Distances[3];
 }
 
 
