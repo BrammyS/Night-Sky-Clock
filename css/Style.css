@@ -1,11 +1,19 @@
-﻿@import url('https://fonts.googleapis.com/css?family=Abel');
+﻿
+@font-face {
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 100;
+    src: url(../fonts/abel-webfont.woff2) format('woff2'), 
+         url(../fonts/abel-webfont.woff) format('woff'),
+         url('https://fonts.googleapis.com/css?family=Abel');
+}
+
 body {
     background-image: url(../img/NightSky.jpg);
     font-family: 'Abel', sans-serif;
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
-    font-weight: 200;
     overflow: hidden;
     font-size: 80px;
     color: #ffffff;
