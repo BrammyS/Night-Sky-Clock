@@ -69,7 +69,7 @@ function GetDistanceClass(time, number) {
 
     if (time === number) return Distances[0];
     if (time === number + 1 || time === number - 1) return Distances[1];
-    if (time >= number + 1 && time <= number + 3 || time >= number - 3 && time <= number - 1) return Distances[2];
+    if (time >= number + 1 && time <= number + 4 || time >= number - 4 && time <= number - 1) return Distances[2];
     return Distances[3];
 }
 
