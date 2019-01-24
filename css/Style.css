@@ -3,9 +3,7 @@
     font-family: 'Abel';
     font-style: normal;
     font-weight: 100;
-    src: url(../fonts/abel-webfont.woff2) format('woff2'), 
-         url(../fonts/abel-webfont.woff) format('woff'),
-         url('https://fonts.googleapis.com/css?family=Abel');
+    src: url(../fonts/abel-webfont.woff2) format('woff2'), url(../fonts/abel-webfont.woff) format('woff'), url(../fonts/Abel.ttf) format('ttf'), url('https://fonts.googleapis.com/css?family=Abel');
 }
 
 body {
@@ -61,12 +59,15 @@ body {
 .distance1 {
     opacity: 1.0;
 }
+
 .distance2 {
     opacity: 0.45;
 }
+
 .distance3 {
     opacity: 0.20;
 }
+
 .distance4 {
     opacity: 0.1;
 }
