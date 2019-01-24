@@ -1,13 +1,17 @@
 ﻿
+// Get all columns on the page.
 var columns = Array.from(document.getElementsByClassName('column'));
+
+// All the classes with different opacities.
 var Distances = ['distance1', 'distance2', 'distance3', 'distance4'];
+
 var numHeight = 80;
 
 var Time =
     [
-        0, 0, // Hours
-        0, 0, // Minutes
-        0, 0  // Seconds
+        0, 0, // Hours.
+        0, 0, // Minutes.
+        0, 0  // Seconds.
     ];
 
 
@@ -27,6 +31,7 @@ function StartTime() {
             Time[i + i + 1] = parseInt(tempTime[i].toString().split('').pop());
         }
     }
+
     // console.log(Time[0] + "" + Time[1] + ":" + Time[2] + "" + Time[3] + ":" + Time[4] + "" + Time[5]);
 
     MoveRow();
@@ -45,6 +50,8 @@ function GetDate() {
 function MoveRow() {
     columns.forEach(function (element, i) {
             var offset = -Time[i] * numHeight;
+
+            // Move the row of numbers up/down.
             element.style.transform = 'translateY(calc(50vh + ' + offset + 'px - ' + numHeight + 'px))';
 
             // Change opacity of the numbers.
@@ -56,8 +63,10 @@ function MoveRow() {
     );
 }
 
+
 // Returns a opacity class.
 function GetDistanceClass(time, number) {
+
     if (time === number) return Distances[0];
     if (time === number + 1 || time === number - 1) return Distances[1];
     if (time >= number + 1 && time <= number + 3 || time >= number - 3 && time <= number - 1) return Distances[2];
@@ -67,5 +76,12 @@ function GetDistanceClass(time, number) {
 
 // Start timer when the page loads.
 window.onload = StartTime();
+
+
+
+
+
+
+
 
 
