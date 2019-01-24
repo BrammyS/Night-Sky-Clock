@@ -5,9 +5,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
-    font-weight: 700;
+    font-weight: 200;
     overflow: hidden;
-    font-size: 100px;
+    font-size: 80px;
     color: #ffffff;
 }
 
@@ -27,9 +27,9 @@ body {
 
 .colon {
     transition: transform 350ms, -webkit-transform 350ms;
-    -webkit-transform: translateY(calc(50vh - 110px));
+    -webkit-transform: translateY(calc(50vh - 90px));
     -webkit-transition: -webkit-transform 350ms;
-    transform: translateY(calc(50vh - 110px));
+    transform: translateY(calc(50vh - 90px));
     transition: -webkit-transform 350ms;
     transition: transform 350ms;
     width: 40px;
@@ -47,7 +47,7 @@ body {
 .number {
     -webkit-transition: opacity 600ms;
     transition: opacity 600ms;
-    height: 100px;
+    height: 80px;
 }
 
 .distance1 {

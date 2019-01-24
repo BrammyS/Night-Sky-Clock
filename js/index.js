@@ -1,7 +1,7 @@
 ﻿
 var columns = Array.from(document.getElementsByClassName('column'));
 var Distances = ['distance1', 'distance2', 'distance3', 'distance4'];
-var numHeight = 100;
+var numHeight = 80;
 
 var Time =
     [
