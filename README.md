@@ -2,4 +2,4 @@
 Small personal project to learn java script.
 
 
-![image](preview.jpg "Preview")
+![image](img/preview.jpg "Preview")
