@@ -5,44 +5,54 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
+    font-size: 100px;
     color: #ffffff;
-    font-size: 60px;
-}
-
-.clock {
-    left: 70%;
-    position: absolute;
 }
 
 .column {
-    width: 30px;
+    transition: transform 350ms, -webkit-transform 350ms;
+    -webkit-transition: -webkit-transform 350ms;
+    transition: -webkit-transform 350ms;
+    transition: transform 350ms;
+    width: 50px;
     float: left;
+}
+
+.colon {
+    transition: transform 350ms, -webkit-transform 350ms;
+    -webkit-transform: translateY(calc(50vh - 110px));
+    -webkit-transition: -webkit-transform 350ms;
+    transform: translateY(calc(50vh - 110px));
+    transition: -webkit-transform 350ms;
+    transition: transform 350ms;
+    float: left;
+    width: 40px;
+}
+
+.clock {
+    position: fixed;
+    float: left;
+    left: 60%;
 }
 
 .colon:after {
     content: ':';
 }
 
-.colon {
-    margin-top: 510px;
-    width: 20px;
-    float: left;
-}
-
 body .clock .number {
-    height: 50px;
     float: left;
+    height: 100px;
 }
 
-.number.visible {
+.number.distance1 {
     opacity: 1.0;
 }
-.number.close {
+.number.distance2 {
     opacity: 0.35;
 }
-.number.far {
+.number.distance3 {
     opacity: 0.15;
 }
-.number.distant {
+.number.distance4 {
     opacity: 0.1;
 }
