@@ -1,6 +1,6 @@
 ﻿
 // Get all columns on the page.
-var columns = Array.from(document.getElementsByClassName('column'));
+var numberRows = Array.from(document.getElementsByClassName('numberRow'));
 
 // All the classes with different opacities.
 var Distances = ['distance1', 'distance2', 'distance3', 'distance4'];
@@ -48,7 +48,7 @@ function GetDate() {
 
 // Moves the rows to the correct position.
 function MoveRow() {
-    columns.forEach(function (element, i) {
+    numberRows.forEach(function (element, i) {
             var offset = -Time[i] * numHeight;
 
             // Move the row of numbers up/down.

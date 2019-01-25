@@ -1,9 +1,9 @@
 ﻿
 @font-face {
+    src: url(../fonts/abel-webfont.woff2) format('woff2'), url(../fonts/abel-webfont.woff) format('woff'), url(../fonts/Abel.ttf) format('ttf'), url('https://fonts.googleapis.com/css?family=Abel');
     font-family: 'Abel';
     font-style: normal;
     font-weight: 100;
-    src: url(../fonts/abel-webfont.woff2) format('woff2'), url(../fonts/abel-webfont.woff) format('woff'), url(../fonts/Abel.ttf) format('ttf'), url('https://fonts.googleapis.com/css?family=Abel');
 }
 
 body {
@@ -11,34 +11,26 @@ body {
     font-family: 'Abel', sans-serif;
     background-repeat: no-repeat;
     background-size: cover;
-    text-align: center;
     overflow: hidden;
     font-size: 80px;
     color: #ffffff;
 }
 
-.column,
-.colon {
+.numberRow {
+    transition: transform 350ms, -webkit-transform 350ms;
+    -webkit-transition: -webkit-transform 350ms;
+    transition: -webkit-transform 350ms;
+    transition: transform 350ms;
+    width: 40px;
     display: inline-block;
     vertical-align: top;
 }
 
-.column {
-    transition: transform 350ms, -webkit-transform 350ms;
-    -webkit-transition: -webkit-transform 350ms;
-    transition: -webkit-transform 350ms;
-    transition: transform 350ms;
-    width: 50px;
-}
-
 .colon {
-    transition: transform 350ms, -webkit-transform 350ms;
-    -webkit-transform: translateY(calc(50vh - 90px));
-    -webkit-transition: -webkit-transform 350ms;
     transform: translateY(calc(50vh - 90px));
-    transition: -webkit-transform 350ms;
-    transition: transform 350ms;
-    width: 40px;
+    display: inline-block;
+    vertical-align: top;
+    width: 15px;
 }
 
 .clock {
@@ -46,17 +38,14 @@ body {
     left: 60%;
 }
 
-.colon:after {
-    content: ':';
-}
-
 .number {
-    -webkit-transition: opacity 600ms;
-    transition: opacity 600ms;
+    -webkit-transition: text-shadow 150ms, opacity 600ms;
+    transition: text-shadow 150ms, opacity 600ms;
     height: 80px;
 }
 
 .distance1 {
+    text-shadow: 1px 1px #15D7FC;
     opacity: 1.0;
 }
 
